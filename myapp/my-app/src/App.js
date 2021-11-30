@@ -3,6 +3,7 @@ import './App.css';
 import TimeLine from './component/Clock.js';
 import Profile from './component/ProFile.js';
 import Clarder from './component/Calendar';
+import Count from './component/CountClick'
 import "react-datetime/css/react-datetime.css";
 function App() {
   return (
@@ -11,7 +12,6 @@ function App() {
       <br/>
       <TimeLine />
       <Clarder />
-
     </div>
   );
 }
