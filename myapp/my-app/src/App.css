@@ -1,0 +1,65 @@
+
+.AppImg{
+  width: 200px;
+  float: left;
+  border:3px 3px 3px 3px solid #0000;
+}
+.AppInfo {
+  font-size: 25px;
+  padding-left: 15px;
+}
+.AppInfo table {
+  text-align: center;
+  border: 1px solid firebrick;
+}
+.AppInfo th ,td{
+  border: 1px solid firebrick;
+  width: 200px;
+  height: 125px;
+}
+.AppTimeShet {
+  position: relative;
+  top: 100px;
+  left: 1500px;
+}
+.Apptile{
+  color: green;
+}
+.Apptime{
+  color: red;
+}
+.AppClader{
+  position: relative;
+  left: 100px;
+  top: 50px;
+  text-align: center;
+  border: 1px solid green;
+}
+.AppClader th, td {
+  border: 1px solid green;
+}
+.AppClader th{
+  width: 200px;
+}
+.Apptile{
+  color: green;
+  position: relative;
+  left: 100px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
