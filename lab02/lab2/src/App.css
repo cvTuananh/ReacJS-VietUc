@@ -1,0 +1,41 @@
+.AppChina {
+  position: relative;
+  background-color: black;
+  width: 200px;
+  text-align: center;
+  color: #fff;
+  left:100px
+}
+
+.Apptokyo{
+  position: relative;
+  background-color: black;
+  width: 200px;
+  text-align: center;
+  color: #fff;
+  left:100px
+}
+.AppCali{
+  position: relative;
+  background-color: black;
+  width: 200px;
+  text-align: center;
+  color: #fff;
+  left:100px;
+}
+.AppIndia{
+  position: relative;
+  background-color: black;
+  width: 200px;
+  text-align: center;
+  color: #fff;
+  left:100px;
+}
+.AppNewyork{
+  position: relative;
+  background-color: black;
+  width: 200px;
+  text-align: center;
+  color: #fff;
+  left:100px;
+}
