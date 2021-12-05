@@ -1,47 +1,63 @@
-import React from "react";
-export default class RefCom extends React.Component {
+import React from 'react';
+import PropTypes from 'prop-types';
+class FormCom extends React.Component {
     constructor(props) {
         super(props);
-        var EUR = 25.732;
-        var VND = 0.000044;
-        var USD = 22.715;
-        var toal = 0;
-        var money = 0;
-
-        this.start=React.createRef();
-        this.end = React.createRef();
+        this.state = { txtName:'', slCar:"",slCar2:"", cbCheck:false,Toal:'' }
     }
-    convert(){
-            
-        if(this.start === "USD" && this.end === "EUR"){
-            this.toal = this.money * this.EUR;
-        }
-        if(this.start === "USD" && this.end === "VND"){
-            this.toal = this.money * this.EUR;
-        }
-        if(this.start === "USD" && this.end === "EUR"){
-            this.toal = this.money * this.EUR;
-        }
+    onSubmitHandler=(event)=>{
+        event.preventDefault()
+        alert(this.state.txtName + " "+ this.state.slCar +" "+this.state.slCar2 +" "+this.state.Toal +" "+ this.state.cbCheck);
     }
-    render() {
-        return (
-            <>
-                <p>nhan so tien</p>
-                <input type="number" ref={this.money}></input>
-                <select ref={this.start}>
-                    <option value="USD">USD</option>
-                    <option value="EUR">EUR</option>
-                    <option value="VND">VND</option>
-                </select>
-                <select ref={this.end}>
-                    <option value="USD">USD</option>
-                    <option value="EUR">EUR</option>
-                    <option value="VND">VND</option>
-                </select>
-                <button onClick={()=>this.convert()}>chuyển</button>
-                <p>Quy ra là</p>
-                <p>{this.toal}</p>
-            </>
+    onChangeHandler=(event)=>{
+        let name=event.target.name
+        let value=event.target.type==="checkbox"? event.target.checked: event.target.value
+        this.setState({
+            [name]:value}
         )
     }
+    covert=(event)=>{
+        let USD = 22.480
+        let VND = 0.00004
+        let EUR =25.814
+        let toalM = 0
+        let MoneyV = this.txtName
+
+        if(this.state.slCar==='VND' && this.state.slCar2==='USD'){
+                    this.toalM = this.MoneyV * USD
+               return this.setSate.Toal= this.toalM
+        }
+        if(this.state.slCar==='VND' && this.state.slCar2==="EUR"){
+            return this.state.Toal= this.state.txtName * this.EUR
+     }
+    }
+    
+    render() { 
+        return (  
+            <>
+            <form onSubmit={this.onSubmitHandler}>     
+            <h3>Nhập tiền</h3>          
+                <input type="text" onChange={this.onChangeHandler} name="txtName" value={this.state.txtName}></input>    
+                <select onChange={this.onChangeHandler} name="slCar" value={this.state.slCar}>
+                    <option>VND</option>
+                    <option>USD</option>
+                    <option>EUR</option>
+                 </select>      
+                 <p>To</p>
+                 <select onChange={this.onChangeHandler} name="slCar2" value={this.state.slCar2}>
+                    <option>VND</option>
+                    <option>USD</option>
+                    <option>EUR</option>
+                 </select>      
+                 
+                <input type="submit" value="Submit" onClick={this.covert}></input>
+            </form>
+            <p>tong tien{this.state.Toal}</p>
+            </>
+        );
+    }
 }
+FormCom.protoType ={
+    txtName: PropTypes.number.isRequired
+}
+export default FormCom;

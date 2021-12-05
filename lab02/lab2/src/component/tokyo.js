@@ -1,16 +1,19 @@
-
-function ClockCali(props){
-    var city = props.city
-    var offset = props.clock
-    var d = new Date();
-    var utc = d.getTime()+(d.getTimezoneOffset()*60000)
-    var nd = new Date(utc+(3600000*offset));
-    return ( 
-        <div className ="Apptokyo">
-            <h3>{city}</h3>
-            <p>{nd.toLocaleTimeString('en-US')}</p>
-        </div>
-        
-    )
+import React from "react";
+export default class RefCom extends React.Component {
+    // eslint-disable-next-line no-useless-constructor
+    constructor(props) {
+        super(props);
+        // this.clickMe=this.clickMe.bind(this);
+    }
+    clickMe=()=>{
+            alert(this.txtName.value);
+    }
+    render() {
+        return (
+            <>
+                <input ref={(note)=>this.txtName=note}></input>
+                <button onClick={this.clickMe}>Click me</button>
+            </>
+        )
+    }
 }
-export default ClockCali
