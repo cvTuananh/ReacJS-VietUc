@@ -6,6 +6,7 @@ import ButtonBox from "./component/ButtonBox";
 import Button from "./component/Button";
 import Clock from "./component/Clock"
 import Random from "./component/Random"
+import Todolist from "./component/todolist";
 
 const btnValues = [
   ["C", "+-", "%", "/"],
@@ -159,6 +160,7 @@ const App = () => {
     </Wrapper> 
         <Clock/>
         <Random />
+        <Todolist />
 
      </> 
   );
