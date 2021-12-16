@@ -1,0 +1,9 @@
+.Clock{
+    margin: 10px;
+    color: #cc3366;
+    font-size:2rem;
+}
+span{
+    font-weight: bold;
+    columns: #33cc66;
+}
