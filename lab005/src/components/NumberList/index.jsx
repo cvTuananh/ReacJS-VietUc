@@ -1,4 +1,4 @@
-import NumberItem from "../NumberList";
+import NumberItem from "../NumberItem";
 
 export default function NumberList(props) {
 	const numbers = props.numbers;
